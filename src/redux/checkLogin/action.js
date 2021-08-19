@@ -1,4 +1,3 @@
-import { createAction } from "@reduxjs/toolkit";
 import {
     CHECK_LOGIN
 } from '../../constants/index'
