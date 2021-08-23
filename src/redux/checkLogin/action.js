@@ -5,7 +5,7 @@ import {
 function checkLogin() {
     return {
         type: CHECK_LOGIN,
-        payload: "",
+        payload: ""
     }
 }
 

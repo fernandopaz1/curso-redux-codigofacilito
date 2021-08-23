@@ -9,7 +9,7 @@ import {CHECK_LOGIN} from "../../constants/index"
 const loginReducer = (state={}, action) => {
     switch (action.type){
         case CHECK_LOGIN:
-            console.log(CHECK_LOGIN)
+            console.log(action)
             return {...state, checked: true}
         default:
             return  {...state, checked: false}

@@ -1,15 +1,20 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useHistory } from "react-router";
+import { useDispatch } from "react-redux";
+
+import checkLogin from '../../redux/checkLogin/action'
 
 export default function Login() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [isLoading, setIsLoading] = useState(true);
   const history = useHistory();
+  const dispatch = useDispatch();
 
   const checkIfUserIsAuthRef = useRef();
 
   const checkIfUserIsAuth = () => {
+    dispatch(checkLogin())
     const isAuth = localStorage.getItem("@superhero-isAuth")?.length > 0;
     if (isAuth) {
       history.push("/search");
